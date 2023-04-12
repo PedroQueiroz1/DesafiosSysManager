@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
+//Tempo total: aprox. 2h e 30minutos
 public class DesafioUm {
 	
 
@@ -47,7 +48,6 @@ public class DesafioUm {
 			System.err.println("Erro ao ler a data. Por favor, informe uma data válida.");
 			e.printStackTrace();
 		}
-	
 	}
 }
 

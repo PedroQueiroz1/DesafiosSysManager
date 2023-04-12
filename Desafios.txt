@@ -1,3 +1,6 @@
 1. Desenvolva um algoritmo em Java que leia a idade de uma pessoa informada em anos, meses
 e dias e depois mostre a mesma idade em dias. Considere o ano com 365 dias e o mês com
 30 dias, por exemplo, 3 anos, 2 meses e 15 dias são 1170 dias
+
+2. Desenvolva um algoritmo em Java que imprima a média dos números 8.7 e 7.8, a média dos
+números 3, 5 e 7, a soma das duas médias anteriores e a média das médias.
