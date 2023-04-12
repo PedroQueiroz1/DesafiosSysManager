@@ -7,3 +7,7 @@ números 3, 5 e 7, a soma das duas médias anteriores e a média das médias.
 
 3. Desenvolva um algoritmo em Java que a pessoa digita seu saldo e recebe a informação de
 qual será o novo saldo após um reajuste de 5%.
+
+4. Desenvolva um algoritmo em Java que leia o valor do salário mínimo e o valor do salário de
+um funcionário. Depois, mostre a quantidade de salários mínimos que esse funcionário
+recebe
