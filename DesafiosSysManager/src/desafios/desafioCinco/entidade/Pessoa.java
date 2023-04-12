@@ -14,6 +14,19 @@ public class Pessoa {
 		this.altura = altura;
 		this.sexo = sexo;
 	}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public float getAltura() {
+		return altura;
+	}
+
+	public char getSexo() {
+		return sexo;
+	}
 
 
 	@Override

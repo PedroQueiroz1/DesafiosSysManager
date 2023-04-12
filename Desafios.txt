@@ -11,3 +11,13 @@ qual será o novo saldo após um reajuste de 5%.
 4. Desenvolva um algoritmo em Java que leia o valor do salário mínimo e o valor do salário de
 um funcionário. Depois, mostre a quantidade de salários mínimos que esse funcionário
 recebe
+
+5. Desenvolva um algoritmo em Java que leia o nome, a altura e o sexo de 50 pessoas e, por
+fim, mostre a maior e menor altura do grupo, a média de alturas dos homens e a média de
+alturas das mulheres.
+
+6. Desenvolva um algoritmo em Java que calcule a quantidade de cerâmicas que será
+necessário para um determinado cômodo de uma casa em reforma. Dica: para saber o
+tamanho total do cômodo basta multiplicar a largura pelo comprimento. Portanto, será
+necessário informar a largura e comprimento do cômodo, e a largura e comprimento de cada
+cerâmica. Por fim, mostre a quantidade de cerâmicas necessárias para a reforma.
