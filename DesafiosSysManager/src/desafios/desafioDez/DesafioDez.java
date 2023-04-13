@@ -2,6 +2,9 @@ package desafios.desafioDez;
 
 import java.util.Scanner;
 
+import desafios.desafioDez.conversor.ConversorFloat;
+import desafios.desafioDez.entidade.Pessoa;
+import desafios.desafioDez.formatador.FormatadorDecimal;
 import desafios.desafioDez.util.SistemaIMC;
 
 public class DesafioDez {
@@ -10,19 +13,34 @@ public class DesafioDez {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Qual o seu nome?");
+		System.out.println("Qual o seu primeiro nome?");
 		String nome = scanner.nextLine();
 		
 		System.out.println("Qual a sua altura?");
-		float altura = scanner.nextFloat();
-		
+		String altura = scanner.next();
+
 		System.out.println("Qual o seu peso?");
-		float peso = scanner.nextFloat();
+		String peso = scanner.next();
 		
+		//Converte altura e peso para float e aceita tanto "," quanto "."
+		float alturaFloat = ConversorFloat.parseFloat(altura); 		
+		float pesoFloat = ConversorFloat.parseFloat(peso);
 		
-		float imc = SistemaIMC.calcularIMC(altura, peso);
+	
+		Pessoa pessoa = new Pessoa(nome, alturaFloat, pesoFloat);
+		
+		float imc = SistemaIMC.calcularIMC(pessoa.getAltura(), pessoa.getPeso());
 		SistemaIMC.exibirSituacao(imc);
+	
 		
-		System.out.println("Seu IMC é: " + imc);
+		//Formata altura e peso para no maximo 2 casas decimais
+		float imcFormatado = FormatadorDecimal.formatarDecimal(imc);
+		
+		
+		System.out.println("Seu IMC é: " + imcFormatado);
+	
+		
+		scanner.close();
 	}
+	
 }
