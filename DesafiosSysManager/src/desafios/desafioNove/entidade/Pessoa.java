@@ -2,6 +2,7 @@ package desafios.desafioNove.entidade;
 
 public class Pessoa {
 	
+	@SuppressWarnings("unused")
 	private String nome;
 	
 	private byte idade;
