@@ -36,3 +36,11 @@ sabemos quantos alunos estarão presentes no dia da votação. Quando o valor 0 
 informado como um número de candidato, o sistema encerra a votação porque não existirá
 o candidato com número 0. Após o encerramento da votação o sistema deve apresentar o
 nome e a quantidade de votos de todos os candidatos e o nome do ganhador.
+
+9. Desenvolva um algoritmo em Java que pergunta o nome e idade de uma pessoa, depois
+apresente a seguinte mensagem de acordo com a idade informada:
+idade 0 a 10: Ingresso Grátis
+idade 11 a 15: Valor do Ingresso R$ 10,00
+idade 16 a 20: Valor do Ingresso R$ 20,00
+idade 21 a 59: Valor do Ingresso R$ 30,00
+idade acima de 59: Valor do Ingresso: R$ 15,00
