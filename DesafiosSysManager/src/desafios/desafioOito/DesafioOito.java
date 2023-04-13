@@ -38,5 +38,8 @@ public class DesafioOito {
 				System.out.println(c.toString());
 			}
 		}
+		
+		scanner.close();
+		
 	}
 }
