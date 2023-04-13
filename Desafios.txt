@@ -28,3 +28,11 @@ igual ou superior a 6.0 ou reprovado. O algoritmo também deve permita ao profes
 inicialmente a quantidade de alunos de sua turma e permitir a digitação dos dados (nome e
 notas) de todos os alunos da turma. Por fim, o algoritmo apresenta a média da turma, a
 maior média e a menor média entre os alunos e os nomes destes. 
+
+8. Desenvolva um algoritmo em Java que permita realizar a votação para determinar um novo
+líder de classe. Inicialmente é informado o nome e o número de cada um dos 5 candidatos.
+O algoritmo deve permitir que a votação continue por tempo indeterminado visto que não
+sabemos quantos alunos estarão presentes no dia da votação. Quando o valor 0 for
+informado como um número de candidato, o sistema encerra a votação porque não existirá
+o candidato com número 0. Após o encerramento da votação o sistema deve apresentar o
+nome e a quantidade de votos de todos os candidatos e o nome do ganhador.

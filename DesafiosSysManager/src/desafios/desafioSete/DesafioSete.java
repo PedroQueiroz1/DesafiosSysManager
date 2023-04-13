@@ -23,6 +23,7 @@ public class DesafioSete {
 		int qtdAlunos = scanner.nextInt();
 		scanner.nextLine();
 		
+		
 		for(int i = 1; i<=qtdAlunos; i++) {
 			System.out.println("Digite o nome do aluno [" + i + "]");
 			String nome = scanner.nextLine();
@@ -45,30 +46,25 @@ public class DesafioSete {
 			mediaTurma += mediaAluno;
 			
 			//Calcula maior média
-			if(mediaAluno>maiorMedia) {
-				maiorMedia = mediaAluno;
-			}
-			
+			if(mediaAluno>maiorMedia) {maiorMedia = mediaAluno;}
 			
 			//Calcula menor media
 			menorMedia = mediaAluno;
 			
-			if(mediaAluno<menorMedia) {
-				menorMedia = mediaAluno;
-			}
-		
-				
+			if(mediaAluno<menorMedia) {menorMedia = mediaAluno;}
+			
 			Aluno aluno = new Aluno(nome, nota1, nota2, situacao);
 			alunos.add(aluno);
-			
-			
+				
 			mediaTurma /= i;
 		}
+		
 		
 		System.out.println("Média da turma: " + mediaTurma);
 		System.out.println("Maior média " + maiorMedia);
 		System.out.println("Menor média " + menorMedia);
 	
+		scanner.close();
 	}
 	
 }
