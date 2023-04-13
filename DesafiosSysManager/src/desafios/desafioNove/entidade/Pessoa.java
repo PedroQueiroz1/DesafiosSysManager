@@ -11,20 +11,8 @@ public class Pessoa {
 		this.idade = idade;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
 	public byte getIdade() {
 		return idade;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public void setIdade(byte idade) {
-		this.idade = idade;
-	}
-	
 }
