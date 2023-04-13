@@ -44,3 +44,14 @@ idade 11 a 15: Valor do Ingresso R$ 10,00
 idade 16 a 20: Valor do Ingresso R$ 20,00
 idade 21 a 59: Valor do Ingresso R$ 30,00
 idade acima de 59: Valor do Ingresso: R$ 15,00
+
+10. Desenvolva um algoritmo em Java que pergunte o nome, altura e peso de uma pessoa,
+depois apresente a seguinte mensagem de acordo com o IMC calculado (Fórmula do IMC:
+peso / (altura * altura)):
+Abaixo de 17: Muito abaixo do peso
+Entre 17 e 18,49: Abaixo do peso
+Entre 18,5 e 24,99: Peso normal
+Entre 25 e 29,99: Acima do peso
+Entre 30 e 34,99: Obesidade I
+Entre 35 e 39,99: Obesidade II (severa)
+Acima de 40: Obesidade III (mórbida)
