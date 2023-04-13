@@ -21,3 +21,10 @@ necessário para um determinado cômodo de uma casa em reforma. Dica: para saber
 tamanho total do cômodo basta multiplicar a largura pelo comprimento. Portanto, será
 necessário informar a largura e comprimento do cômodo, e a largura e comprimento de cada
 cerâmica. Por fim, mostre a quantidade de cerâmicas necessárias para a reforma.
+
+7. Desenvolva um algoritmo em Java que permita ao professor informa o nome do aluno e suas
+respectivas 2 notas. O sistema informa a situação do aluno: aprovado, caso tenha uma média
+igual ou superior a 6.0 ou reprovado. O algoritmo também deve permita ao professor digitar
+inicialmente a quantidade de alunos de sua turma e permitir a digitação dos dados (nome e
+notas) de todos os alunos da turma. Por fim, o algoritmo apresenta a média da turma, a
+maior média e a menor média entre os alunos e os nomes destes. 
