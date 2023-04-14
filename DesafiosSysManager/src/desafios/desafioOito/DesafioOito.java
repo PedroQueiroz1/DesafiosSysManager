@@ -30,7 +30,7 @@ public class DesafioOito {
 			num = scanner.nextByte();	
 			
 			if(num>=1 && num<=5) {
-			candidato[num].setVoto((byte) (candidato[num].getVoto() + 1));
+				candidato[num].setVoto((byte) (candidato[num].getVoto() + 1));
 			}else {
 				System.out.println("Você selecionou um número inválido.");
 			}
