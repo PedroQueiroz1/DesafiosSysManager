@@ -7,8 +7,22 @@ public class DesafioDois {
 	
 	public static void main(String[] args) {
 	
-	float[] numsFloat = {8.7f, 7.8f};
+	float numFloat1 = 8.7f;
+	
+	//Aqui estou adicionando o numero "7.8f"
+	String numFloatString = String.valueOf(numFloat1);
+	StringBuilder numFloatReverso = new StringBuilder(numFloatString);
+	numFloatReverso.reverse();
+	
+	//Converte de StringBuilder para String
+	String numFloat2String = numFloatReverso.toString();
+	
+	//De String para Float
+	float numFloat2 = Float.parseFloat(numFloat2String);
+	
+	
 	byte[] numsByte = {3, 5, 7};
+	
 	
 	float mediaFloat;
 	byte mediaByte;
@@ -16,13 +30,13 @@ public class DesafioDois {
 	float mediaTotal;
 	
 	
-	mediaFloat = (numsFloat[0] + numsFloat[1])/2;
+	mediaFloat = (numFloat1 + numFloat2)/2;
 	mediaByte = (byte) ((numsByte[0] + numsByte[1] + numsByte[2])/3);
 	somaMedia = mediaFloat + mediaByte;
 	mediaTotal = (somaMedia/2);
 	
 	
-	ImpressoraDeSaida.exibirMediaNumfloats(numsFloat[0], numsFloat[1], mediaFloat);
+	ImpressoraDeSaida.exibirMediaNumfloats(numFloat1, numFloat2, mediaFloat);
 	ImpressoraDeSaida.exibirMediaNumBytes(numsByte[0], numsByte[1], numsByte[2], mediaByte);
 	ImpressoraDeSaida.exibirSomaDasMedias(mediaFloat, mediaByte, somaMedia);
 	ImpressoraDeSaida.exibirMediaTotal(mediaTotal);
