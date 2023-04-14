@@ -2,7 +2,7 @@ package desafios.desafioTres.util;
 
 public class Calculadora {
 
-	public static float reajustaSaldo(float saldo) {
+	public static float reajustarSaldo(float saldo) {
 	return (saldo*5/100) + saldo;
 	}
 	

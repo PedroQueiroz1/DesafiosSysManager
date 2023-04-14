@@ -18,10 +18,13 @@ public class DesafioCinco {
 		Scanner scanner = new Scanner(System.in);
 		List<Pessoa> pessoas = new ArrayList<>();
 		
+		
 		System.out.println("Digite os dados de 50 pessoas: ");
 		
+		
 		//Testando método IntStream.range() com forEach()
-		IntStream.range(1, 51).forEach(i -> {
+		//Entrada de dados
+		IntStream.range(1, 5).forEach(i -> {
 			System.out.println("Pessoa " + i);
 			
 			System.out.print("Nome: ");
@@ -32,26 +35,32 @@ public class DesafioCinco {
 			scanner.nextLine();
 			
 			System.out.print("Sexo: ");
-			char sexo = scanner.nextLine().charAt(0);
+			char sexo = Character.toUpperCase(scanner.nextLine().charAt(0));
 			
 			
 			float alturaConvertida = ConversorFloat.parseFloat(altura);
+			
 			
 			Pessoa pessoa = new Pessoa(nome, alturaConvertida, sexo);
 			pessoas.add(pessoa);
 		});
 		
+		
 		Stream<Pessoa> streamPessoas = pessoas.stream();
 		List<Pessoa> todos = streamPessoas.collect(Collectors.toList());
 		
+		
 		//Exibe o resultado das pessoas cadastradas
-		System.out.println("Pessoas cadastradas:");
+		System.out.println("\n\nPessoas cadastradas:");
 		todos.forEach(System.out::println);
+		
 		
 		//Exibe a média das alturas de cada sexo e também a menor altura encontrada e a maior altura encontrada
 		System.out.println("\n\nMasculino: " 
 				+ Calculadora.calcularMediaAltura(pessoas, 'M')
 				+ "\n\nFeminino: " + Calculadora.calcularMediaAltura(pessoas, 'F'));
+		
+		
 		
 		scanner.close();
 	}

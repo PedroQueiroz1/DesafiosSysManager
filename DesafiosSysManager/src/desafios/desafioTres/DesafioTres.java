@@ -20,7 +20,7 @@ public class DesafioTres {
 			float saldoConvertido = ConversorFloat.parseFloat(saldo);
 			
 			//Reajusta o saldo em 5%
-			float saldoReajustado = Calculadora.reajustaSaldo(saldoConvertido);
+			float saldoReajustado = Calculadora.reajustarSaldo(saldoConvertido);
 			
 			//Converte o "." do saldo(float) em ","
 			DecimalFormat formato = new DecimalFormat("0.00");

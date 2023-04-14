@@ -19,21 +19,32 @@ public class Calculadora {
 		
 		DecimalFormat formato = new DecimalFormat("#.##");
 		String mAlturaFormatada = formato.format(mediaAltura);
+			
 		
-		Pessoa alturaMax = pessoas.stream().filter(pessoa
-				-> pessoa.getSexo() ==sexo)
-				.max(Comparator.comparingDouble(Pessoa::getAltura))
-				.orElse(null);
+		Pessoa alturaMax = encontrarAlturaMax(pessoas, sexo);
+		Pessoa alturaMin = encontrarAlturaMin(pessoas, sexo);
 		
-		Pessoa alturaMin = pessoas.stream().filter(pessoa
+		
+		return ImpressoraDeSaida.exibirMensagemFinal(sexo, alturaMax, alturaMin, mAlturaFormatada);
+	}
+	
+	//Encontra a pessoa com a maior altura
+	public static Pessoa encontrarAlturaMax(List<Pessoa> pessoas, char sexo) { 
+	
+	return pessoas.stream().filter(pessoa
+			-> pessoa.getSexo() ==sexo)
+			.max(Comparator.comparingDouble(Pessoa::getAltura))
+			.orElse(null);
+	}
+	
+	//Encontra a pessoa com a menor altura
+	public static Pessoa encontrarAlturaMin(List<Pessoa> pessoas, char sexo) {
+		
+		return pessoas.stream().filter(pessoa
 				-> pessoa.getSexo() == sexo)
 				.min(Comparator.comparingDouble(Pessoa::getAltura))
 				.orElse(null);
-		
-		return "\nMédia das alturas do sexo [" + sexo + "]: " 
-				+ mAlturaFormatada 
-				+ "\nAltura máxima encontrada: " + alturaMax 
-				+ "\nAltura mínima encontrada: " + alturaMin;
 	}
+
 	
 }

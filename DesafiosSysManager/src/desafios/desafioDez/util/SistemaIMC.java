@@ -1,10 +1,14 @@
 package desafios.desafioDez.util;
 
+import java.util.function.Function;
+
 public class SistemaIMC {
 
 	
 	public static float calcularIMC(float altura, float peso) {
-		return (peso/(altura*altura));
+		Function<Float, Float> quadradoAltura = a -> a * a;
+		
+		return (peso/(quadradoAltura.apply(altura)));
 	}
 	
 	public static void exibirSituacao(float imc){
