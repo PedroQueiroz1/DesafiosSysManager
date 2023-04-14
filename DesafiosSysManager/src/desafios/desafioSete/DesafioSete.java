@@ -17,6 +17,7 @@ public class DesafioSete {
 		List<Aluno> alunos = new ArrayList<>();
 		float mediaTurma = 0;
 		float maiorMedia = 0;
+		// Não é o ideal \/
 		float menorMedia = 0;
 		
 		
@@ -41,7 +42,7 @@ public class DesafioSete {
 			float nota1Convertida = ConversorFloat.parseFloat(nota1);
 			float nota2Convertida = ConversorFloat.parseFloat(nota2);
 			
-			
+			// * *
 			float mediaAluno = Sistema.calcularMedia(nota1Convertida, nota2Convertida);
 			
 			String situacao = Sistema.verificarSituacao(mediaAluno);
@@ -56,9 +57,13 @@ public class DesafioSete {
 			if(mediaAluno > maiorMedia) {maiorMedia = mediaAluno;}
 			
 			//Calcula menor media
-			menorMedia = mediaAluno;
-			
-			if(mediaAluno < menorMedia) {menorMedia = mediaAluno;}
+			if(i == 1) {
+				menorMedia = mediaAluno;
+			}else if(mediaAluno < menorMedia) {
+				menorMedia = mediaAluno;
+			} else {
+				System.out.println("Erro");
+			}
 			
 			Aluno aluno = new Aluno(nome, nota1Convertida, nota2Convertida, situacao);
 			alunos.add(aluno);

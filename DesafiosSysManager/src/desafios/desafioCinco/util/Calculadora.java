@@ -9,7 +9,6 @@ public class Calculadora {
 	
 	
 	//Era float mas tive que mudar pra double por causa da função lambda... mapToFloat não funciona
-	//Tenho que dividir esse método em 3 métodos diferentes?
 	public static String calcularMediaAltura(List<Pessoa> pessoas, char sexo) {
 		Double mediaAltura = pessoas.stream().filter(pessoa 
 				-> pessoa.getSexo() == sexo)

@@ -24,7 +24,7 @@ public class DesafioCinco {
 		
 		//Testando método IntStream.range() com forEach()
 		//Entrada de dados
-		IntStream.range(1, 51).forEach(i -> {
+		IntStream.range(1, 4).forEach(i -> {
 			System.out.println("Pessoa " + i);
 			
 			System.out.print("Nome: ");
@@ -45,6 +45,9 @@ public class DesafioCinco {
 			pessoas.add(pessoa);
 		});
 		
+		//Media geral
+		float mediaGeral = (Float.parseFloat(Calculadora.calcularMediaAltura(pessoas, 'M')) + Float.parseFloat(Calculadora.calcularMediaAltura(pessoas, 'F')))/2;
+		
 		
 		Stream<Pessoa> streamPessoas = pessoas.stream();
 		List<Pessoa> todos = streamPessoas.collect(Collectors.toList());
@@ -55,12 +58,15 @@ public class DesafioCinco {
 		todos.forEach(System.out::println);
 		
 		
+		
+		
 		//Exibe a média das alturas de cada sexo e também a menor altura encontrada e a maior altura encontrada
 		System.out.println("\n\nMasculino: " 
 				+ Calculadora.calcularMediaAltura(pessoas, 'M')
 				+ "\n\nFeminino: " + Calculadora.calcularMediaAltura(pessoas, 'F'));
 		
-		
+		//Exibe a média das alturas incluindo todos
+		System.out.println("Media geral: " + mediaGeral);
 		
 		scanner.close();
 	}
