@@ -46,6 +46,7 @@ public class DesafioCinco {
 		});
 		
 		//Media geral
+		// ERRO
 		float mediaGeral = (Float.parseFloat(Calculadora.calcularMediaAltura(pessoas, 'M')) + Float.parseFloat(Calculadora.calcularMediaAltura(pessoas, 'F')))/2;
 		
 		
