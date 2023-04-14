@@ -19,8 +19,5 @@ public class Sistema {
 			return "reprovado!";
 		}
 	}
-	
-	
-	
 
 }

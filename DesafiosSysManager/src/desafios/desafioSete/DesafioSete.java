@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import desafios.desafioSete.conversor.ConversorFloat;
 import desafios.desafioSete.entidade.Aluno;
 import desafios.desafioSete.util.Sistema;
 
@@ -25,17 +26,23 @@ public class DesafioSete {
 		
 		
 		for(int i = 1; i<=qtdAlunos; i++) {
+		
 			System.out.println("Digite o nome do aluno [" + i + "]");
 			String nome = scanner.nextLine();
 			
 			System.out.println("Digite a primeira nota do aluno [" + i + "]");
-			float nota1 = scanner.nextFloat();
+			String nota1 = scanner.next();
 			
 			System.out.println("Digite a segunda nota do aluno [" + i + "]");
-			float nota2 = scanner.nextFloat();
+			String nota2 = scanner.next();
 			scanner.nextLine();
 			
-			float mediaAluno = Sistema.calcularMedia(nota1, nota2);
+			//Converte para float de até duas casas decimais
+			float nota1Convertida = ConversorFloat.parseFloat(nota1);
+			float nota2Convertida = ConversorFloat.parseFloat(nota2);
+			
+			
+			float mediaAluno = Sistema.calcularMedia(nota1Convertida, nota2Convertida);
 			
 			String situacao = Sistema.verificarSituacao(mediaAluno);
 			
@@ -46,21 +53,22 @@ public class DesafioSete {
 			mediaTurma += mediaAluno;
 			
 			//Calcula maior média
-			if(mediaAluno>maiorMedia) {maiorMedia = mediaAluno;}
+			if(mediaAluno > maiorMedia) {maiorMedia = mediaAluno;}
 			
 			//Calcula menor media
 			menorMedia = mediaAluno;
 			
-			if(mediaAluno<menorMedia) {menorMedia = mediaAluno;}
+			if(mediaAluno < menorMedia) {menorMedia = mediaAluno;}
 			
-			Aluno aluno = new Aluno(nome, nota1, nota2, situacao);
+			Aluno aluno = new Aluno(nome, nota1Convertida, nota2Convertida, situacao);
 			alunos.add(aluno);
 				
 			mediaTurma /= i;
 		}
 		
+		float mediaTurmaConvertida = ConversorFloat.parseFloat(Float.toString(mediaTurma));
 		
-		System.out.println("Média da turma: " + mediaTurma);
+		System.out.println("Média da turma: " + mediaTurmaConvertida);
 		System.out.println("Maior média " + maiorMedia);
 		System.out.println("Menor média " + menorMedia);
 	

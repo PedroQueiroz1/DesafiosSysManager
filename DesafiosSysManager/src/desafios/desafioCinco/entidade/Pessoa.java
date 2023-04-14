@@ -31,7 +31,7 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Nome: " + nome + "| Altura: " + altura + "| Sexo: " + sexo;
+		return "Nome: " + nome + " | Altura: " + altura + " | Sexo: " + sexo;
 	}
 
 }

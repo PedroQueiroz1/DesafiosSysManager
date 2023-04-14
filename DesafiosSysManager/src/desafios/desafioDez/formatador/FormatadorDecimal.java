@@ -6,6 +6,7 @@ import desafios.desafioDez.conversor.ConversorFloat;
 
 public class FormatadorDecimal {
 	
+	//Formata para número de até 2 casas decimais "x.xx"
 	public static float formatarDecimal(float num) {
 		DecimalFormat formata = new DecimalFormat();
 		

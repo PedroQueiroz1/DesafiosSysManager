@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import desafios.desafioCinco.conversor.ConversorFloat;
 import desafios.desafioCinco.entidade.Pessoa;
 import desafios.desafioCinco.util.Calculadora;
 
@@ -18,22 +20,26 @@ public class DesafioCinco {
 		
 		System.out.println("Digite os dados de 50 pessoas: ");
 		
-		for(int i = 1; i<=6; i++) {
+		//Testando método IntStream.range() com forEach()
+		IntStream.range(1, 51).forEach(i -> {
 			System.out.println("Pessoa " + i);
 			
-			System.out.println("Nome: ");
+			System.out.print("Nome: ");
 			String nome = scanner.nextLine();
 			
-			System.out.println("Altura: ");
-			float altura = scanner.nextFloat();
+			System.out.print("Altura: ");
+			String altura = scanner.next();
 			scanner.nextLine();
 			
-			System.out.println("Sexo: ");
+			System.out.print("Sexo: ");
 			char sexo = scanner.nextLine().charAt(0);
 			
-			Pessoa pessoa = new Pessoa(nome, altura, sexo);
+			
+			float alturaConvertida = ConversorFloat.parseFloat(altura);
+			
+			Pessoa pessoa = new Pessoa(nome, alturaConvertida, sexo);
 			pessoas.add(pessoa);
-		}
+		});
 		
 		Stream<Pessoa> streamPessoas = pessoas.stream();
 		List<Pessoa> todos = streamPessoas.collect(Collectors.toList());

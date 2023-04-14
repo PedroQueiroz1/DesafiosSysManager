@@ -33,8 +33,7 @@ public class Calculadora {
 		return "\nMédia das alturas do sexo [" + sexo + "]: " 
 				+ mAlturaFormatada 
 				+ "\nAltura máxima encontrada: " + alturaMax 
-				+ "\nAltura mínima encontrada:" + alturaMin;
+				+ "\nAltura mínima encontrada: " + alturaMin;
 	}
 	
-
 }
