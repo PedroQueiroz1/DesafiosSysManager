@@ -1,21 +1,28 @@
-package desafios;
+package desafios.desafioTres;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+import desafios.desafioTres.conversor.ConversorFloat;
+import desafios.desafioTres.util.Calculadora;
+
 public class DesafioTres {
 
-	
-	
 	public static void main(String[] args) {
 		
 		try (Scanner scanner = new Scanner(System.in)) {
 			
+			//Entrada de dados, lê o saldo
 			System.out.println("Digite o seu saldo.");
-			float saldo = scanner.nextFloat();
+			String saldo = scanner.next();
 			
-			float saldoReajustado = (saldo*5/100) + saldo;
+			//Converte o saldo(STRING) em saldo(float) e transforma a "," em "."
+			float saldoConvertido = ConversorFloat.parseFloat(saldo);
 			
+			//Reajusta o saldo em 5%
+			float saldoReajustado = Calculadora.reajustaSaldo(saldoConvertido);
+			
+			//Converte o "." do saldo(float) em ","
 			DecimalFormat formato = new DecimalFormat("0.00");
 			String saldoFormatado = formato.format(saldoReajustado);
 			
