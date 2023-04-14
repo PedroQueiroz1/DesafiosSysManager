@@ -26,12 +26,12 @@ public class DesafioSeis {
 		float comprimentoComodo = scanner.nextFloat();
 		
 		
-		float tamanhoComodo = Calculadora.calculaTamanho(larguraComodo, comprimentoComodo);
-		float tamanhoCeramica = Calculadora.calculaTamanho(larguraCeramica, comprimentoCeramica);
+		float tamanhoComodo = Calculadora.calcularTamanho(larguraComodo, comprimentoComodo);
+		float tamanhoCeramica = Calculadora.calcularTamanho(larguraCeramica, comprimentoCeramica);
 		
 		
 		System.out.println(" Quantidade de cerâmica necessária: "
-				+ formato.format(Calculadora.calculaQtdCeramica(tamanhoComodo, tamanhoCeramica)));
+				+ formato.format(Calculadora.calcularQtdCeramica(tamanhoComodo, tamanhoCeramica)));
 		scanner.close();
 	}
 }
