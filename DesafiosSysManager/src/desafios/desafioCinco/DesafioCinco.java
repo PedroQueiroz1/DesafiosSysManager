@@ -24,7 +24,7 @@ public class DesafioCinco {
 		
 		//Testando método IntStream.range() com forEach()
 		//Entrada de dados
-		IntStream.range(1, 5).forEach(i -> {
+		IntStream.range(1, 51).forEach(i -> {
 			System.out.println("Pessoa " + i);
 			
 			System.out.print("Nome: ");
